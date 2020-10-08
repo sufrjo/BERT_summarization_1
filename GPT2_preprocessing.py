@@ -83,7 +83,7 @@ def main(args):
         the tensor dataset in pytorch .pt file
     """
     print('read the input csv file')
-    df = pd.read_csv(args.input)
+    df = pd.read_csv(args.input, nrows = 1000)
     df = df.dropna(subset=['abstract']).reset_index(drop=True)
     list_POS = ['FW', 'JJ', 'NN', 'NNS', 'NNP',
                 'VB', 'VBD', 'VBG', 'VBN', 'VBZ', 'VBP']
